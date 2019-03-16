@@ -1,0 +1,7 @@
+account;opposing_account;date;amount;category
+Nirav;System Account;2019-03-02;10000.00;
+Nirav;Viram;2019-03-02;1000.00;Home expenses
+Nirav;BEST;2019-03-02;10000.00;Bill
+Nirav;HDFC;2019-03-02;-2500.00;Bill
+Nirav;NKJ;2019-03-02;-1000.00;Bill
+Nirav;BEST;2019-03-02;-2500.00;Bill
