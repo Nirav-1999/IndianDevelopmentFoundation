@@ -10,5 +10,7 @@ router.register(r"students", views.StudentViewSet)
 
 urlpatterns = [
     url(r"^api/", include(router.urls)),
-    url(r'^login/',views.LoginApiView.as_view(),name='login'),
+    url(r'^login/',views.login_page,name='login'),
+    url(r'^logout/',views.logout_page,name='logout'),
+   
 ]

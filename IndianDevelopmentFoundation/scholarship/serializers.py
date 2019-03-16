@@ -29,3 +29,7 @@ class StudentSerializer(serializers.HyperlinkedModelSerializer):
         student = Student(user=user, age=validated_data["age"], state=validated_data["state"], caste=validated_data["caste"], income=validated_data["income"], prev_marks=validated_data["prev_marks"],resume=validated_data["resume"], university_name=validated_data["university_name"],gender=validated_data["gender"],birthdate=validated_data["birthdate"])
         student.save()
         return student
+
+class LoginSerializer(serializers.Serializer):
+    username = serializers.CharField(max_length=10)
+    password = serializers.CharField(style={"input_type": "password"})
