@@ -1,0 +1,6 @@
+account;opposing_account;date;amount;category
+Nirav;System Account;2019-03-02;10000.00;
+Nirav;BEST;2019-03-02;-2000.00;Bill
+Nirav;BEST;2019-03-02;-2000.00;
+Nirav;Jinesh;2019-03-01;-5000.00;
+Nirav;Viram;2019-03-01;-1000.00;
