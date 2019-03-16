@@ -26,14 +26,14 @@ Table of Content:
 06/ breadcrumb
 07/ about
 08/ team
-09/ project 
-10/ price 
-11/ team 
-12/ blog 
-13/ video  
-14/ features  
-15/ career  
-16/ contact 
+09/ project
+10/ price
+11/ team
+12/ blog
+13/ video
+14/ features
+15/ career
+16/ contact
 17/ footer
 
 =====================================================================*/
@@ -101,7 +101,7 @@ added from my side  in sermons area
     width: 100%;
     text-align: center;
     margin:2px;
-    
+
 }
 
 /* for icons in sermons */
@@ -118,7 +118,7 @@ added from my side  in sermons area
     transition: all 0.5s ease-in;
     -webkit-transition: all 0.5s ease-in;
     -moz-transition: all 0.5s ease-in;
-    
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -3634,22 +3634,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-bottom {
-  padding-top: 46px;
+  padding-top: 0px;
 }
 
 .footer-bottom .footer-text a {
   color: #00c8e6;
 }
 
-.footer-bottom .footer-social {
-  text-align: right;
-}
+
 
 .footer-bottom .footer-social a {
   font-size: 18px;
   line-height: 30px;
   color: #82848f;
-  margin-left: 25px;
+  margin-right: 25px;
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
@@ -3657,6 +3655,88 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-bottom .footer-social a:hover {
   color: #00c8e6;
+}
+
+---------------------------------------------------------
+CSS 2nd Page
+--------------------------------------------------
+.top-heading {
+    background: #00c8e6;
+    border-bottom: 1px solid #00c8e6;
+    cursor: pointer;
+    margin:30px 10px;
+    font-size: 50px
+}
+
+
+.bottom-section {
+    border: 1px solid #00c8e6;
+    border-top-color: initial;
+    border-top-style: none;
+    border-top-width: initial;
+    border-right-color: rgb(41, 167, 146);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-color: rgb(41, 167, 146);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: rgb(41, 167, 146);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    border-top: none;
+    color:white;
+    position: relative;
+    top: -30px;
+    padding: 30px;
+    margin:30px 10px;
+
+}
+
+.number-heading {
+    position: relative;
+    display: inline-block;
+    top: -10px;
+}
+
+.thumbnail{
+
+}
+.text_block{
+    padding:30px;
+
+}
+
+.bottom-section button{
+    width: 400px;
+    position: relative;
+    left: 40%;
+}
+.blocks{
+    margin: 60px
+}
+
+.butsh{
+  height: 60px;
+  width: 400px;
+  margin: auto;
+  border-radius: 10px;
+  border-color: inherit;
+  /*background-color: #00c8e6;*/
+  text-align: center;
+  position: relative;
+  opacity: 0.8;
+  /*top:-150px*/
+}
+.butsh:hover{
+  background-color: black;
+  color: #F7CA18;
+  border-color: #F7CA18;
+  border: 2px solid #F7CA18;
 }
 
 /*---------------------------------------------------- */
