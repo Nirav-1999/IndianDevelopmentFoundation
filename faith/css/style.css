@@ -3739,6 +3739,62 @@ CSS 2nd Page
   border: 2px solid #F7CA18;
 }
 
+
+-----------------
+
+
+
+.f_half
+{
+    height:600px;
+    background-image: url(image/text.jpg);
+    background-repeat: no-repeat;
+    background-size: cover
+}
+.s_half{
+    background-color: white;
+    color:#00c8e6;
+    overflow: hidden;
+    border: 2px solid black;
+}
+.mid{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    border-radius: 20px;
+    overflow:auto;
+
+
+}
+.col-lg-6{
+    /*border:2px solid red;*/
+
+}
+.noice{
+    background-image: linear-gradient(#00c8e6,black,#00c8e6);
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.form-group{
+    border-style: none;
+
+}
+.form-control{
+    background-color: white;
+    border-style: none;
+    border-bottom:2px solid black;
+}
+form{
+    color:#00c8e6;
+    height: 450px;
+}
+label{
+    color:black;
+}
+
+--------------------------
+
 /*---------------------------------------------------- */
 
 /*# sourceMappingURL=style.css.map */
