@@ -13,5 +13,6 @@ urlpatterns = [
     url(r'^login/',views.login_page,name='login'),
     url(r'^logout/',views.logout_page,name='logout'),
     url(r'^scholarships/',views.ScholarshipView.as_view(),name='scholarships'),
+    url(r'^signup/',views.add_student,name='SignUp'),
    
 ]
