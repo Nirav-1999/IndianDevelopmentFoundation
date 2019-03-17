@@ -24,9 +24,9 @@
           <div class="col-lg-6 f_half" style="background-image: url(image/text3.jpg)"></div>
             <div class="col-lg-6 s_half"><h1 style="text-align: center">Sign Up</h1>
               <p></p>
-              <form method="POST">
+              <form method="POST" role="form" enctype="multipart/form-data">
                 {% csrf_token %}
-                <div class="form-group" enctype="multipart/form-data">
+                <div class="form-group" >
                   <label for="{{ form.username.id_for_label }}"></label>
                   <input type="text" class="form-control" name="username" id="id_username" aria-describedby="emailHelp" placeholder="Enter Username">
                 </div>
