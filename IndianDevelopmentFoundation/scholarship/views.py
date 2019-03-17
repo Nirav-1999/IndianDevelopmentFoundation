@@ -16,6 +16,7 @@ from rest_framework.views import APIView
 # Create your views here.
 
 class StudentViewSet(viewsets.ModelViewSet):
+    permission_classes = (AllowAny,)
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
 def login_page(request):
@@ -23,7 +24,7 @@ def login_page(request):
         form = AuthenticationForm(data = request.POST)
         if form.is_valid():
             user = form.get_user()
-            login(request, user)    
+            login(request, user)
             return redirect("index/", user)
     else:
         form = AuthenticationForm()
@@ -45,7 +46,7 @@ def logout_page(request):
 #             'auth': str(request.auth),  # None
 #         }
 #         return Response(content)
-    
+
 #     def post(self,request):
 #         user = authenticate(username = request.query_params['username'], password = request.query_params['password'])
 #         print(user)
@@ -63,7 +64,7 @@ def logout_page(request):
         #         print('wrong password')
         # else:
         #     print('user does not exist')
-        
+
 
 
 # class MyBasicAuthentication(BasicAuthentication):
@@ -110,6 +111,3 @@ def logout_page(request):
 #     def post(self, request):
 #         logout(request)
 #         return HttpResponseRedirect(redirect_to="/login/")
-
-
-

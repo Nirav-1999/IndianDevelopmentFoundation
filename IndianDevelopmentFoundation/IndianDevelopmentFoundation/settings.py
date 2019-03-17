@@ -138,3 +138,4 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = MEDIA_DIR
+CORS_ORIGIN_ALLOW_ALL = True
