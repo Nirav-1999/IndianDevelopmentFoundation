@@ -139,20 +139,29 @@ def add_student(request):
     
     if request.method == 'POST':
         user_form = UserCreationForm(request.POST)
-        profile_form = StudentDataForm(request.POST)
+        profile_form = StudentDataForm(request.POST,request.FILES)
         print(profile_form)
             
         if user_form.is_valid() and profile_form.is_valid():
             user = user_form.save(commit=False)
             user.save()
-            
+            user.student.age = profile_form.cleaned_data.get('age')
+            user.student.state = profile_form.cleaned_data.get('state')
+            user.student.caste = profile_form.cleaned_data.get('caste')
+            user.student.income = profile_form.cleaned_data.get('income')
+            user.student.resume = profile_form.cleaned_data.get('resume')
+            user.student.university_name = profile_form.cleaned_data.get('university_name')
+            user.student.gender = profile_form.cleaned_data.get('gender')
+            user.student.birthdate = profile_form.cleaned_data.get('birthdate')
+            user.student.save()
+
             # import pdb; pdb.set_trace()
             # print(college)
-            student = profile_form.save(commit = False)
-            student.user = user
+            # student = profile_form.save(commit = False)
+            # student.user = user
         
-            print("Done")
-            profile_form.save()
+            # print("Done")
+            # profile_form.save()
             return redirect('Student:login')
         else:
             print(profile_form.errors)
