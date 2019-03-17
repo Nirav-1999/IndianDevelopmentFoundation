@@ -6,14 +6,14 @@ GENDER = [
     ("M", ("Male")),
     ("F", ("Female")),
     ("O", ("Other")),
-   
+
 ]
 
 CASTES = [
     ("SC", ("SC")),
     ("ST", ("ST")),
     ("OBC", ("OBC")),
-    ("NT", ("NT")),   
+    ("NT", ("NT")),
     ("Open", ("Open")),
 
 ]
@@ -60,7 +60,6 @@ class Student(models.Model):
     state = models.CharField(choices = STATES, default = "None", blank = False, max_length = 100)
     caste = models.CharField(choices = CASTES, default = "None", blank = False, max_length = 100)
     income = models.PositiveIntegerField()
-    prev_marks = models.FileField()
     resume = models.FileField()
     university_name = models.CharField(max_length = 100)
     gender = models.CharField(choices = GENDER,default = "None", blank = False, max_length = 100)
