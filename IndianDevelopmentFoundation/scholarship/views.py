@@ -37,6 +37,9 @@ def logout_page(request):
     else:
         return render(request, "github/logout.html")
 
+# class SearchScholarshipsAPIView(APIView):
+    
+
 # class LoginApiView(APIView):
 #     permission_classes = (AllowAny,)
 #     def get(self,request):
