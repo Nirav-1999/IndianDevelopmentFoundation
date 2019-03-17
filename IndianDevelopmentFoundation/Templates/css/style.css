@@ -3836,6 +3836,83 @@ css
 }
 --------------------------
 
+--------------------------------------------------------------------------------------
+C$$
+----------------------------------------------------------------------------------------
+.headd{
+  height: 600px;
+  margin: 20px;
+}
+.scholarship--inner
+{
+    margin: 0 auto;
+    padding: 4.375rem 2.5rem 0;
+    max-width: 80rem;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 2px 4px 2px  rgba(0,0,0,0.7);
+    margin: 0 auto;
+    margin-bottom: -4.375rem;
+    position: relative;
+    top: -5.3125rem;
+}
+
+.ourScholarshipWinners ul{
+    list-style-type: none;
+}
+
+
+
+
+.shadow {
+  position: relative;
+  margin: 3em auto;
+  padding-top: 2em;
+  width: 400px;
+  height: 100px;
+  border: 1px solid #777777;
+  border-radius: 5px;
+  background: black;
+  text-align: center;
+  box-shadow: 0 0 25px 0 rgb(0,0,0) inset;
+}
+
+.shadow:after {
+  content: "";
+  position: relative;
+}
+
+.curved-2:after {
+  position: relative;
+  z-index: -2;
+}
+
+.curved-2:after {
+  position: absolute;
+  top: 0;
+  left: 12px;
+  right: 12px;
+  bottom: 0;
+  box-shadow: 0 0px 10px 7px rgb(0,0,0);
+  border-radius: 450px / 15px;
+}
+
+.eligible{
+    font-size: 20px;
+    color:deepskyblue;
+    text-shadow: 2px 2px 2px black
+}
+
+.checked {
+  color: orange;
+}
+
+--------------------------
 /*---------------------------------------------------- */
 
 /*# sourceMappingURL=style.css.map */
