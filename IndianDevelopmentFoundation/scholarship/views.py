@@ -13,6 +13,7 @@ from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .crawl import gather_links
+from .forms import StudentDataForm, UserCreationForm
 import random
 
 # Create your views here.
@@ -131,3 +132,34 @@ class ScholarshipView(APIView):
         for elements in a:
             elements.update({'prize':(random.randint(1,10)*1000)})
         return Response(a)
+
+def add_student(request):
+    user_form = {}
+    profile_form ={}
+    
+    if request.method == 'POST':
+        user_form = UserCreationForm(request.POST)
+        profile_form = StudentDataForm(request.POST)
+        print(profile_form)
+            
+        if user_form.is_valid() and profile_form.is_valid():
+            user = user_form.save(commit=False)
+            user.save()
+            
+            # import pdb; pdb.set_trace()
+            # print(college)
+            student = profile_form.save(commit = False)
+            student.user = user
+        
+            print("Done")
+            profile_form.save()
+            return redirect('Student:login')
+        else:
+            print(profile_form.errors)
+            print(user_form.errors)
+            user_form = UserCreationForm()
+            profile_form = StudentDataForm()
+           
+
+            
+    return render(request,'SignUp.html',{'user_form':user_form,'profile_form':profile_form})
