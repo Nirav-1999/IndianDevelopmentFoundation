@@ -67,4 +67,3 @@ def gather_links(base_url,page_url):
 #for i in crawl_url:
 #    print(gather_links(i))
 
-print(gather_links('https://www.buddy4study.com/','https://www.buddy4study.com/scholarships'))
