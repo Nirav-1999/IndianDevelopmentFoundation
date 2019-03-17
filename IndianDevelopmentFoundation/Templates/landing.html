@@ -182,7 +182,7 @@
 
 
 
-            <span style="color:black" id="Title1">SCHOLARSHIP FOR GRADUATE</span>
+            <span style="color:black" id="Title1"></span>
           </div>
 
 
@@ -198,7 +198,7 @@
           <div style="height:2px;background-color: white"></div>
 
 
-          <button style="width:140px;margin-top: 10px">VIEW scholarship</button>
+          <a href=""><button style="width:140px;margin-top: 10px">VIEW scholarship</button></a>
       </div>
 
   </div>
@@ -320,15 +320,15 @@
 
 <!-- Optional JavaScript -->
 <script>
-  function get(){
-    var url =
+  // function getdata(){
 
-    fetch(url)
-    .then((res) => res.json)
-    .then((data) => {
+    fetch('http://127.0.0.1:8000/scholarships/')
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById('Title1').textContent = data[0].title;
 
     })
-  }
+  // }
 </script>
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -4,7 +4,6 @@ from queue import Queue
 from html.parser import HTMLParser
 from urllib import parse
 from urllib.request import urlopen
-from bs4 import BeautifulSoup
 
 class LinkFinder(HTMLParser):
     def __init__(self,base_url,page_url,html_string):
@@ -40,16 +39,16 @@ class LinkFinder(HTMLParser):
                             #print(tag.string)
                         self.data.append(info)
 
-    
+
 
     def page_links(self):
         return self.data
 
     def error(self, message):
         pass
-    
-    
-    
+
+
+
 def gather_links(base_url,page_url):
     html_string=''
     try:
@@ -66,4 +65,3 @@ def gather_links(base_url,page_url):
 
 #for i in crawl_url:
 #    print(gather_links(i))
-
