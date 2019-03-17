@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'scholarship',
     'rest_framework',
+    'chat',
     'corsheaders',
 ]
 
@@ -71,7 +72,7 @@ ROOT_URLCONF = 'IndianDevelopmentFoundation.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['Templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -138,4 +139,5 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = MEDIA_DIR
+
 CORS_ORIGIN_ALLOW_ALL = True
