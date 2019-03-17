@@ -12,5 +12,6 @@ urlpatterns = [
     url(r"^api/", include(router.urls)),
     url(r'^login/',views.login_page,name='login'),
     url(r'^logout/',views.logout_page,name='logout'),
+    url(r'^scholarships/',views.ScholarshipView.as_view(),name='scholarships'),
    
 ]

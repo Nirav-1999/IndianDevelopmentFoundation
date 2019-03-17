@@ -12,6 +12,8 @@ from rest_framework.authentication import BasicAuthentication, SessionAuthentica
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from .crawl import gather_links
+import random
 
 # Create your views here.
 
@@ -20,23 +22,29 @@ class StudentViewSet(viewsets.ModelViewSet):
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
 def login_page(request):
+    if request.user:
+        return render(request, "landing.html", {"form" : "form"})
+
     if request.method == "POST":
         form = AuthenticationForm(data = request.POST)
+        print(form)
         if form.is_valid():
             user = form.get_user()
             login(request, user)
-            return redirect("index/", user)
+            return render(request, "landing.html", {"form" : "form"})
+        else:
+            print(form.errors)
     else:
         form = AuthenticationForm()
-    return render (request, "github/login.html", {"form" : form})
+    return render(request, "login.html", {"form" : form})
 
 
 def logout_page(request):
     if request.method == "POST":
         logout(request)
-        return redirect("github:logout")
+        return redirect("Student:logout")
     else:
-        return render(request, "github/logout.html")
+        return render(request, "index.html")
 
 # class SearchScholarshipsAPIView(APIView):
     
@@ -114,3 +122,12 @@ def logout_page(request):
 #     def post(self, request):
 #         logout(request)
 #         return HttpResponseRedirect(redirect_to="/login/")
+
+class ScholarshipView(APIView):
+    permission_classes = (AllowAny,)
+
+    def get(self,request):
+        a = gather_links('https://www.buddy4study.com/','https://www.buddy4study.com/scholarships')
+        for elements in a:
+            elements.update({'prize':(random.randint(1,10)*1000)})
+        return Response(a)
